@@ -9,7 +9,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import frc.robot.Constants.OIConstants;
 import frc.robot.subsystems.DriveTrain;
 import edu.wpi.first.wpilibj2.command.RunCommand;
-
+import edu.wpi.first.wpilibj2.command.Subsystem;
 
 /**
  * This class is where the bulk of the robot should be declared. Since
@@ -19,8 +19,8 @@ import edu.wpi.first.wpilibj2.command.RunCommand;
  * commands, and button mappings) should be declared here.
  */
 public class RobotContainer {
-    // The robot's subsystems
-    public final DriveTrain m_driveTrain = DriveTrain.getInstance(); 
+  // The robot's subsystems
+  public final DriveTrain m_driveTrain = DriveTrain.getInstance();
   
     // The driver's controller
     private Joystick m_mainStick = new Joystick(OIConstants.mainStickPort);
@@ -35,12 +35,11 @@ public class RobotContainer {
      * The container for the robot.  Contains subsystems, OI devices, and commands.
      */
     public RobotContainer() {
-        m_driveTrain.setDefaultCommand(new RunCommand(
+        
+      m_driveTrain.setDefaultCommand(new RunCommand(
         () -> m_driveTrain.tankDrive(m_mainStick.getRawAxis(1), m_mainStick.getRawAxis(4), m_mainStick.getRawAxis(2), m_mainStick.getRawAxis(3)),
         m_driveTrain)
       );
-
-      
     }
 }
   
