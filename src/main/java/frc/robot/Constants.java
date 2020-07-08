@@ -19,58 +19,47 @@ public final class Constants {
   public static final boolean isFinal = false;
 
   public static final class PortConstants {
-    // CAN ID 
+    // CAN ID
+    // public static final int FRONT_LEFT_DRIVE = 1;
+    // public static final int MIDDLE_LEFT_DRIVE = 2;
+    // public static final int BACK_LEFT_DRIVE = 3;
+
+    // public static final int FRONT_RIGHT_DRIVE = 4;
+    // public static final int MIDDLE_RIGHT_DRIVE = 5;
+    // public static final int BACK_RIGHT_DRIVE = 6;
+
     public static final int FRONT_LEFT_DRIVE = 1;
-    public static final int MIDDLE_LEFT_DRIVE = 2;
-    public static final int BACK_LEFT_DRIVE = 3;
+    public static final int BACK_LEFT_DRIVE = 2;
 
-    public static final int FRONT_RIGHT_DRIVE = 4;
-    public static final int MIDDLE_RIGHT_DRIVE = 5;
-    public static final int BACK_RIGHT_DRIVE = 6;
+    public static final int FRONT_RIGHT_DRIVE = 3;
+    public static final int BACK_RIGHT_DRIVE = 4;
 
-    public static final int INTAKE = 7;
-    public static final int INDEXER = 8;
+    // public static final int INTAKE = 7;
+    // public static final int INDEXER = 8;
 
-    public static final int CLIMBER = 9;
+    // public static final int CLIMBER = 9;
 
-    public static final int LEFT_SHOOTER = 13;
-    public static final int RIGHT_SHOOTER = 10;
+    // public static final int LEFT_SHOOTER = 13;
+    // public static final int RIGHT_SHOOTER = 10;
 
-    public static final int TOP_FEEDER = 12;
-    public static final int BOTTOM_FEEDER = 11;
+    // public static final int TOP_FEEDER = 12;
+    // public static final int BOTTOM_FEEDER = 11;
 
-    public static final int INTAKE_ANGLE = 14;
+    // public static final int INTAKE_ANGLE = 14;
 
-    public static final int SPINNER = 15;
+    // public static final int SPINNER = 15;
   }
 
   public static final class PortConstantsFinal {
-    // CAN ID 
+    // CAN ID
     public static final int FRONT_LEFT_DRIVE = 1;
-    public static final int MIDDLE_LEFT_DRIVE = 2;
-    public static final int BACK_LEFT_DRIVE = 3;
+    public static final int BACK_LEFT_DRIVE = 2;
 
-    public static final int FRONT_RIGHT_DRIVE = 4;
-    public static final int MIDDLE_RIGHT_DRIVE = 5;
-    public static final int BACK_RIGHT_DRIVE = 6;
-
-    public static final int INTAKE = 10;
-    public static final int INDEXER = 9;
-    public static final int INTAKE_ANGLE = 11;
-
-    public static final int CLIMBER = 13;
-
-    public static final int LEFT_SHOOTER = 14;
-    public static final int RIGHT_SHOOTER = 7;
-
-    public static final int TOP_FEEDER = 15;
-    public static final int BOTTOM_FEEDER = 8;
-
-    public static final int SPINNER = 12;
+    public static final int FRONT_RIGHT_DRIVE = 3;
+    public static final int BACK_RIGHT_DRIVE = 4;
   }
-  
 
-  public static final class DriveConstants{
+  public static final class DriveConstants {
     public static final double OUTPUT_MIN = 0.0;
     public static final double OUTPUT_MAX = 1;
     public static final double kP_DRIVE = 0.008;
@@ -80,9 +69,10 @@ public final class Constants {
   }
 
   public static final class PanelConstants {
-    //constants for encoder and rotational control
+    // constants for encoder and rotational control
     public static final int COUNTS_PER_REV = 42;
-    //260 should be equal to 26 spins of the gear box shaft, which is equal to 3 1/4 rotations of panel
+    // 260 should be equal to 26 spins of the gear box shaft, which is equal to 3
+    // 1/4 rotations of panel
     public static final int MIN_REVS = 260;
     public static final int CONVERSION_FACTOR = 1;
   }
@@ -92,13 +82,12 @@ public final class Constants {
     // Drive
     public static double kS = 0.1; // 0.390; //0.130 //0.402
     public static double kS_CONCRETE = 0.27;
-    public static double kV = 3.59;    
-    public static double kV_CONCRETE  = 3.;
+    public static double kV = 3.59;
+    public static double kV_CONCRETE = 3.;
     public static double kA = 0.458;
     public static double kRSQUARED = 0.945;
-    public static double kTRACKWIDTH = 0.5842; //0.728585410;
+    public static double kTRACKWIDTH = 0.5842; // 0.728585410;
 
-    
     public static double kP_POSITION = 4.13;
     public static double kD_POSITION = 1850.0;
     public static double kP_VELOCITY = 1.8;
@@ -128,7 +117,7 @@ public final class Constants {
 
     // Control Panel
 
-    //Shooter
+    // Shooter
     public static double kVtoRPM = 0;
   }
 
@@ -140,7 +129,7 @@ public final class Constants {
     public static double kV = 3.59;
     public static double kA = 0.458;
     public static double kRSQUARED = 0.945;
-    public static double kTRACKWIDTH = 0.5842; //0.728585410;
+    public static double kTRACKWIDTH = 0.5842; // 0.728585410;
 
     public static double kP_POSITION = 4.13;
     public static double kD_POSITION = 1850.0;
@@ -171,7 +160,7 @@ public final class Constants {
 
     // Control Panel
 
-    //Shooter
+    // Shooter
     public static double kVtoRPM = 0;
   }
 
@@ -186,12 +175,14 @@ public final class Constants {
   public static final class FieldConstants {
     public static double INNER_PORT_HEIGHT = 2.4257; // meters
     public static double LIMELIGHT_HEIGHT = 0.4953; // meters
-    public static double RELATIVE_INNER_PORT_HEIGHT = 1.8542; // INNER_PORT_HEIGHT - LIMELIGHT_HEIGHT; //meters; calculation in vision.java
+    public static double RELATIVE_INNER_PORT_HEIGHT = 1.8542; // INNER_PORT_HEIGHT - LIMELIGHT_HEIGHT; //meters;
+                                                              // calculation in vision.java
   }
 
   public static final class VisionConstants {
-    public static double LIMELIGHT_ANGULAR_DISPLACEMENT_DEGREES = 28.414; //20
-    public static double LIMELIGHT_ANGULAR_DISPLACEMENT_RADIANS = Units.degreesToRadians(LIMELIGHT_ANGULAR_DISPLACEMENT_DEGREES);
+    public static double LIMELIGHT_ANGULAR_DISPLACEMENT_DEGREES = 28.414; // 20
+    public static double LIMELIGHT_ANGULAR_DISPLACEMENT_RADIANS = Units
+        .degreesToRadians(LIMELIGHT_ANGULAR_DISPLACEMENT_DEGREES);
   }
 
 }
